@@ -70,6 +70,7 @@
     </select>
 
     <button id="submit-button">submit</button>
+    <button id="show-match-button">show match</button>
 
 <script>
 
@@ -99,6 +100,17 @@ console.log(data)
 // // Show the modal with the best match
 // $("#results-modal").modal("toggle");
 });
+})
+
+
+$('#show-match-button').on('click', function(){
+
+$.ajax({url:"/data/friends", method: "GET"}).then(function(dataReturned){
+
+
+console.log(dataReturned)
+})
+
 
 })
 
