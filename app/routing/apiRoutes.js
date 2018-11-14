@@ -2,41 +2,49 @@ var friends = require("../data/friends");
 
 module.exports = function(app) {
     app.get("/data/friends",function(req,res){
-        console.log(friends)
-        //  var recentUser = friends.length
-        //  recentUser = parseInt(recentUser)
-        //  recentUser--
-        //  var currentLogin = JSON.stringify(friends[recentUser])
-        //  currentLogin = JSON.parse(currentLogin)
-        //  console.log(currentLogin.name)
-        //  var comparison = [];
-        //  var talley = 0;
+         var recentUser = friends.length
+         recentUser = parseInt(recentUser)
+         recentUser--
+         var currentLogin = friends[recentUser]
+         console.log('name of currently logged in person ' + currentLogin.name)
+         var comparison = [];
+         var talley1 = 0;
+         var talley = 0;
 
-        //  for (var i in friends){
-        //     for (var j in friends[i].scores){
-        //         // console.log(talley)
-        //         talley += Math.abs(friends[i].scores[j]) - Math.abs(parseInt(currentLogin.scores[j]))
-                
-        //     }
-        //     comparison.push(talley) 
+         for (var i in friends){
+             talley = 0;
+            for (var j in friends[i].scores){
+                let test1 = parseInt(friends[i].scores[j], 10)
+                let test2  = parseInt(currentLogin.scores[j], 10)
+                console.log(typeof test1 === 'number')
+                console.log(typeof test2 === 'number')
+                console.log(test1 + ' - ' + test2)
+                talley1 = test1 - test2
+                talley = talley + Math.abs(talley1)
+                console.log(test1 + ' - ' + test2 + ' = ' + talley)
+            }
+            console.log('talley is ' + talley)
+            // talley = Math.abs(talley)
+            comparison.push(talley) 
              
-        //  }
-        //  console.log(comparison)
-        //  var bestMatch = Math.min.apply(null,comparison)
-        //  var bestMatch = comparison.indexOf(bestMatch)
+         }
+         console.log(comparison)
+         comparison.pop();
+         var bestMatch = Math.min.apply(null,comparison)
+         var bestMatch = comparison.indexOf(bestMatch)
            
         
-        
-        // res.json(friends[bestMatch].name)
-        // // console.log(friends)
+         res.json(friends[bestMatch])
+        // console.log(friends)
     });
 
     app.post("/data/friends",function(req,res){
-      console.log(req.body)
-        // console.log(data)
+     
+      var data = req.body
+        console.log(data)
         // data = JSON.parse(data)
         // console.log(data)
-        // friends.push(data)
+        friends.push(data)
         
         //some functionality needs to be issmplemented here
     });

@@ -102,12 +102,19 @@
           ]
         }
 
-user = JSON.stringify(user)
+// user = JSON.stringify(user)
 
-
+// $.ajax({
+//     type: 'POST',
+//     url: '/data/friends',
+//     data: user,
+//     success: function (data){
+//         console.log(data)
+//     }
+// }) 
 
 $.post("/data/friends", user, function(data) {
-    console.log(data)
+    console.log('returned from POST call back ' + data)
     });
 
 })
@@ -115,13 +122,12 @@ $.post("/data/friends", user, function(data) {
 
 $('#show-match-button').on('click', function(){
     $.ajax({url:"/data/friends", method: "GET"}).then(function(dataReturned){
-        console.log(dataReturned)
+        console.log('returned from the GET ajax call promise : ' + dataReturned.name)   
+        console.log('returned from the GET ajax call promise : ' + dataReturned.photo)       
     })
+
+
 })
-
-       
-
-
 
 </script>
 
