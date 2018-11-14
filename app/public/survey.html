@@ -10,10 +10,16 @@
   <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
+<div class="top-bar">
+
+</div>
+    <div class="container">
+
+    
 <h2>name</h2>    
 <input id="name" type="text">
 
@@ -75,43 +81,42 @@
 <script>
 
     $('#submit-button').on('click',function(){
+      
+        var q1 = parseInt($("#1").val())
+        var q2 = parseInt($("#2").val())
+        var q3 = parseInt($("#3").val())
+        var q4 = parseInt($("#4").val())
+        var q5 = parseInt($("#5").val())
+        var q6 = parseInt($("#6").val())
+        
         var user = {
             name: $('#name').val().trim(),
             address: $('#pic-url').val().trim(),
             scores: [
-            $("#1").val(),
-            $("#2").val(),
-            $("#3").val(),
-            $("#4").val(),
-            $("#5").val(),
-            $("#6").val()
+            q1,
+            q2,
+            q3,
+            q4,
+            q5,
+            q6
           ]
         }
 
-// console.log(user)
+user = JSON.stringify(user)
 
-// AJAX post the data to the friends API.
+
+
 $.post("/data/friends", user, function(data) {
+    console.log(data)
+    });
 
-// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-console.log(data)
-// $("#match-name").text(data.name);
-// $("#match-img").attr("src", data.photo);
-// // Show the modal with the best match
-// $("#results-modal").modal("toggle");
-});
 })
 
 
 $('#show-match-button').on('click', function(){
-
-$.ajax({url:"/data/friends", method: "GET"}).then(function(dataReturned){
-
-
-console.log(dataReturned)
-})
-
-
+    $.ajax({url:"/data/friends", method: "GET"}).then(function(dataReturned){
+        console.log(dataReturned)
+    })
 })
 
        
@@ -120,7 +125,7 @@ console.log(dataReturned)
 
 </script>
 
-
+</div>
 </body>
 
 </html>
