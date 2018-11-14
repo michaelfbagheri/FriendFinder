@@ -10,7 +10,7 @@
   <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -102,16 +102,7 @@
           ]
         }
 
-// user = JSON.stringify(user)
 
-// $.ajax({
-//     type: 'POST',
-//     url: '/data/friends',
-//     data: user,
-//     success: function (data){
-//         console.log(data)
-//     }
-// }) 
 
 $.post("/data/friends", user, function(data) {
     console.log('returned from POST call back ' + data)

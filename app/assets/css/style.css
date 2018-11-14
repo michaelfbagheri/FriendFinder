@@ -1,0 +1,31 @@
+.container {
+   
+    height: 800px;
+}
+.matchmaker{
+    height: 100px;
+    width: 100px;
+}
+
+.mainbackground{
+    background-image: url(../photos/background-1.png);
+    
+}
+
+.picture{
+    float: left;
+}
+
+.title{
+    float: right;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+.main-paragraph{
+    padding: 25px;
+    float: center;
+    font-weight: 600;
+    color: whitesmoke;
+    text-align: center;
+}
