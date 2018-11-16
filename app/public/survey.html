@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-        <head>
-                <meta charset="UTF-8">
-                <title>survey</title>
-              
-                <!-- Latest compiled and minified CSS -->
-                <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-              
-              </head>
+<head>
+    <meta charset="UTF-8">
+    <title>survey</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand picture" href="#">
-                <img alt="Brand" src="../assets/photos/cupid.jpg" style="border-radius: 25px 25px 40px 0px">
+                <img alt="Brand" src="assets/photos/cupid.jpg" style="border-radius: 25px 25px 40px 0px">
             </a>
             <div class="title">
                 <h1>Friendship finder</h1>
@@ -39,85 +41,88 @@
 
         <div class="row">
             <div class="col-12">
-        <h3 class="dropdown-question">Your mind is always buzzing with unexplored ideas and plans</h3>
-        <select class="dropdown-Answer" name="test" id="1">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
+                <h3 class="dropdown-question">1. Your mind is always buzzing with unexplored ideas and plans</h3>
+                <select class="dropdown-Answer" name="test" id="1">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
             </div>
         </div>
         <div class="row">
-                <div class="col-12">
-        <h3 class="dropdown-question">Generally speaking, you rely more on your experience than your imagination.</h3>
-        <select  class="dropdown-Answer" name="test" id="2">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
-        </div>
-        </div>
-        <div class="row">
-                <div class="col-12">
-        <h3 class="dropdown-question">You find it easy to stay relaxed and focused even when there is some pressure.</h3>
-        <select class="dropdown-Answer" name="test" id="3">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
-        </div>
+            <div class="col-12">
+                <h3 class="dropdown-question">2. Generally speaking, you rely more on your experience than your
+                    imagination.</h3>
+                <select class="dropdown-Answer" name="test" id="2">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
         </div>
         <div class="row">
-                <div class="col-12">
-        <h3 class="dropdown-question">You rarely do something just out of sheer curiosity.</h3>
-        <select class="dropdown-Answer" name="test" id="4">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
-        </div>
-        </div>
-        <div class="row">
-                <div class="col-12">
-        <h3 class="dropdown-question">In a discussion, truth should be more important than people’s sensitivities.</h3>
-        <select class="dropdown-Answer" name="test" id="5">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
-        </div>
+            <div class="col-12">
+                <h3 class="dropdown-question">3. You find it easy to stay relaxed and focused even when there is some
+                    pressure.</h3>
+                <select class="dropdown-Answer" name="test" id="3">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
         </div>
         <div class="row">
-                <div class="col-12">
-        <h3 class="dropdown-question">Questions 6 text</h3>
-        <select class="dropdown-Answer" name="test" id="6">
-            <option value="1">1 (strongly disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (strongly agree)</option>
-        </select>
-        </div>
-        </div>
-        <div class="row">
-                <div class="col-12">
-        <button class="button" id="submit-button">submit</button>
-        </div>
+            <div class="col-12">
+                <h3 class="dropdown-question"> 4. You rarely do something just out of sheer curiosity.</h3>
+                <select class="dropdown-Answer" name="test" id="4">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
         </div>
         <div class="row">
-                <div class="col-12">
-        <button class="button" id="show-match-button">show match</button>
-                </div>
+            <div class="col-12">
+                <h3 class="dropdown-question">5. In a discussion, truth should be more important than people’s
+                    sensitivities.</h3>
+                <select class="dropdown-Answer" name="test" id="5">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="dropdown-question">6. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+                <select class="dropdown-Answer" name="test" id="6">
+                    <option value="1">1 (strongly disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly agree)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="button" id="submit-button">submit</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="button" id="show-match-button">show match</button>
+            </div>
         </div>
         <script>
 
